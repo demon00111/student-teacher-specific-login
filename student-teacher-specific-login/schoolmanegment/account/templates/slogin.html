@@ -1,0 +1,26 @@
+<h1> Welcome !!!! </h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Page</title>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success font"> {{message}} </div>
+    {% endfor %}
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{data.as_p}}
+        {{user_type}}
+        <input type="submit" value="login">
+    </form>
+	<a href="{% url  'profile' %}"><input type="submit" value="Registration Form"></a>
+    
+</body> 
+</html>
