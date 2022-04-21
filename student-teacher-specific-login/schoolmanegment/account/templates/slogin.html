@@ -17,7 +17,6 @@
     <form action="" method="POST">
         {% csrf_token %}
         {{data.as_p}}
-        {{user_type}}
         <input type="submit" value="login">
     </form>
 	<a href="{% url  'profile' %}"><input type="submit" value="Registration Form"></a>

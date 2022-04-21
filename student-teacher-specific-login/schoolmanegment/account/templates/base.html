@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<form method="POST" >
+	<form method="POST"  enctype="multipart/form-data">
 	 {% csrf_token %}
 		<fieldset class="form-group">
 			<legend class="border-bottom mb-4">Student Registration</legend>
@@ -21,6 +21,12 @@
 
 
 			{{ p_form.as_p }}
+			<!-- <form action="" method="post">
+
+				<input type="text" name="filename" placeholder="Enter file here"> 
+				<input type="file" multiple name="upload">
+
+			</form> -->
 		
 		</fieldset>
 		<button type="submit">Submit</button>

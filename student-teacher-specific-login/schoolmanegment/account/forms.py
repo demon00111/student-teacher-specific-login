@@ -13,14 +13,12 @@ class UserUpdateForm(UserCreationForm):
 class TeacherForm(AuthenticationForm):
 	class Meta:
 		model = User
-		fields = ['username' ,'email','user_type' ]
+		fields = ['username' ,'email' ]
 
-class UserType(forms.ModelForm):
-	class Meta:
-		model = Profile
-		fields = ['user_type']
+
 
 class ProfileUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		fields = ['id','gender','mobile_number','hobby','dob','user_type']
+		fields = ['id','gender','mobile_number','hobby','dob','user_type','caption','video']
+		widgets={"video":forms.FileInput(attrs={'id':'video','required':True,'multiple':True})}

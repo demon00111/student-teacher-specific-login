@@ -1,0 +1,23 @@
+<h1>'update the data'</h1>
+
+{% for i in form1 %}
+    <div class="row">
+
+        <tr> 
+            <td> {{ i.user }}</td>
+            <td> 
+            <form action="{% url 'update' i.id %}" >
+                {% csrf_token %}
+
+                <input type="submit" value="Edit" class="btn btn-secondary">
+                
+
+            </form> 
+            </td>
+          
+        
+        </tr>           
+    
+    </div>
+
+{% endfor %}

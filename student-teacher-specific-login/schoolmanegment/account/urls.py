@@ -8,4 +8,6 @@ urlpatterns = [
     path('login/',views.loginpage, name='login'),
     path('sdata/',views.sdata, name='sdata'),
     path('tdata/',views.tdata, name='tdata'),
+    path('edit',views.edit, name='edit'),
+    path('<int:id>/',views.iteams, name='update'),
 ]

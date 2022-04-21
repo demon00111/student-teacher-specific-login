@@ -1,0 +1,13 @@
+
+
+<form method="POST">
+        {% csrf_token %} 
+        {% for fm in form1 %}
+            {{fm.label_tag}}  {{fm}}  {{fm.errors|striptags}} <br><br>
+
+        {% endfor%}
+        {{form2.as_p}}
+        <input type="submit"  value="save"  class="btn btn-success">
+
+</form>
+ 
